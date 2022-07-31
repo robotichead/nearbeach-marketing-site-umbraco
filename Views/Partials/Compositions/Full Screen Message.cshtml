@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var fullScreenTextMessage = Model.Value("fullScreenTextMessage");
+}
+
+<section class="full-screen-message" 
+         style="background-color: #f5f8fa;"
+>
+    <!--SPACER-->
+    <div class="spacer h-48"></div>
+    
+    <!--CONTENT-->
+    <div class="message text-7xl px-14 font-raleway-dots"
+         style="text-shadow: 1px 1px rgba(0, 0, 0, 0.5);"
+    >
+        @fullScreenTextMessage
+    </div>  
+    
+    <!--SPACER-->
+    <div class="spacer h-48"></div>
+</section>

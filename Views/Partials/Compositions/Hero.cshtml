@@ -1,0 +1,32 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var backgroundColourBottom = Model.Value("backgroundColourBottom");
+    var backgroundColourTop = Model.Value("backgroundColourTop");
+    var backgroundImage = Model.Value<IPublishedContent>("backgroundImage");
+    var backgroundImageOpacity = Model.Value("backgroundImageOpacity");
+    var desktopImage = Model.Value<IPublishedContent>("desktopImage");
+}
+
+<section class="hero">
+    <!--BACKGROUND IMAGE-->
+    <div class="hero-background overflow-hidden"
+         style="background-image:linear-gradient(to top, @backgroundColourBottom, @backgroundColourTop), url('@backgroundImage.Url()');"
+    >
+        <!--CONTENT-->
+        <div class="mx-auto mt-20 text-center text-slate-50">
+            <!--COPY-->
+            <h1 class="header-text text-8xl font-normal font-pacifico tracking-widest">@Model.Value("headerText")</h1>
+            <p class="header-copy mx-auto text-3xl font-thin font-lexend-deca max-w-2xl">@Model.Value("headerCopy")</p>
+            
+            <!-- BROWSER MOCKUPS -->
+            <div class="browser-mockup mx-auto mt-20 max-w-6xl"
+            >
+                <div class="chrome">
+                    <span class="url">https://demo.nearbeach.app</span>
+                </div>
+                <img src="@desktopImage.Url()"
+                >
+            </div>
+        </div>
+    </div>
+</section>

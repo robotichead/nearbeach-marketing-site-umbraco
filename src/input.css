@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header-background {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top;
+}
+
+.header-text {
+    text-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-copy {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.url {
+    background-color: #fff;
+    color: #4b505c;
+    cursor: default;
+    display: block;
+    font-size: 0.9em;
+    height: 2.25em;
+    left: 7.5em;
+    line-height: 2.25em;
+    padding: 0 0.5em;
+    text-align: left;
+    width: calc(100% - 15em);
+}
+
+.chrome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    /* display: inline-block; */
+    height: 3em;
+    line-height: 2em;
+    line-height: 3em;
+    position: relative;
+    width: 100%;
+}
+
+.chrome::before {
+    content: '\f053 \f054 \f021';
+    left: 0.75em;
+    letter-spacing: 0.85em;
+    text-align: left;
+}
+
+.chrome::after {
+    content: '\f077 \f078 \f00d';
+    letter-spacing: 0.65em;
+    right: 0.75em;
+    text-align: right;
+    text-indent: 0.75em;
+}
+
+.chrome::after, .chrome::before {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #bbb;
+    cursor: default;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 1.2em;
+    font-style: normal;
+    font-weight: normal;
+    height: inherit;
+    line-height: inherit;
+    overflow: hidden;
+    width: 5em;
+}
+
+.split::before {
+    content: ' ';
+    display: block;
+    position: relative;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100' width='100'%3E%3Cpolygon points='0,100 100,0 100,100' style='fill:%23f5f8fa;stroke:none;stroke-width:0' /%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    height: 6em;
+    margin-top: -6em;
+}

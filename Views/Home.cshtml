@@ -1,0 +1,14 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "Master.cshtml";
+}
+
+<!--HERO PARTIAL VIEW-->
+@await Html.PartialAsync("Compositions/Hero")
+
+<!-- SPLIT -->
+<div class="split"></div>
+
+<!-- FULL SCREEN MESSAGE -->
+@await Html.PartialAsync("Compositions/Full Screen Message")

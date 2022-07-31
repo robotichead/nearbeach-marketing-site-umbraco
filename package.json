@@ -1,0 +1,15 @@
+{
+  "name": "nearbeach-marketing-umbraco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "npx tailwindcss -i ./src/input.css -o ./wwwroot/css/nearbeach.css --minify",
+    "watch": "npx tailwindcss -i ./src/input.css -o ./wwwroot/css/nearbeach.css --watch"
+  },
+  "author": "Luke Christopher Clarke",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.1.7"
+  }
+}
