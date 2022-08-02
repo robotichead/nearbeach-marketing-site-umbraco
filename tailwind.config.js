@@ -10,7 +10,7 @@ module.exports = {
       fontFamily: {
         'lexend-deca': ['"Lexend Deca"', 'sans-serif'],
         'pacifico': ['"Pacifico"', 'cursive'],
-        'raleway-dots': ['"Raleway Dots"', 'cursive'],
+        // 'raleway-dots': ['"Raleway Dots"', 'cursive'],
       }
     },
   },

@@ -5,6 +5,8 @@
     var backgroundImage = Model.Value<IPublishedContent>("backgroundImage");
     var backgroundImageOpacity = Model.Value("backgroundImageOpacity");
     var desktopImage = Model.Value<IPublishedContent>("desktopImage");
+    var tabletImage = Model.Value<IPublishedContent>("tabletImage");
+    var mobileImage = Model.Value<IPublishedContent>("mobileImage");
 }
 
 <section class="hero">
@@ -15,17 +17,28 @@
         <!--CONTENT-->
         <div class="mx-auto mt-20 text-center text-slate-50">
             <!--COPY-->
-            <h1 class="header-text text-8xl font-normal font-pacifico tracking-widest">@Model.Value("headerText")</h1>
-            <p class="header-copy mx-auto text-3xl font-thin font-lexend-deca max-w-2xl">@Model.Value("headerCopy")</p>
+            <h1 class="header-text text-5xl sm:text-8xl font-normal font-pacifico tracking-widest">@Model.Value("headerText")</h1>
+            <p class="header-copy mx-auto text-1xl sm:text-3xl font-thin font-lexend-deca max-w-xs sm:max-w-2xl">@Model.Value("headerCopy")</p>
             
             <!-- BROWSER MOCKUPS -->
-            <div class="browser-mockup mx-auto mt-20 max-w-6xl"
+            <div class="browser-mockup mx-2 md:mx-4 lg:mx-auto mt-20 max-w-6xl"
             >
-                <div class="chrome">
-                    <span class="url">https://demo.nearbeach.app</span>
+                <div class="chrome hidden sm:flex w-100 relative items-center justify-center bg-neutral-200 rounded-t-lg h-12 "
+                     style="line-height: 3rem;"
+                >
+                    <span class="bg-white text-black text-sm text-left leading-8 h-8 py-0 px-2 mx-0"
+                          style="width: calc(100% - 15em);"
+                    >https://demo.nearbeach.app</span>
                 </div>
                 <img src="@desktopImage.Url()"
+                     class="hidden lg:block"
                 >
+                <img src="@tabletImage.Url()"
+                     class="hidden md:block lg:hidden"
+                >
+                <img src="@mobileImage.Url()"
+                     class="block md:hidden"
+                <!-->-->
             </div>
         </div>
     </div>
