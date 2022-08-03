@@ -22,6 +22,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100&family=Pacifico&display=swap&family=Raleway+Dots&display=swap" rel="stylesheet"> 
     </head>
     <body class="p-0 m-0">
+        @await Html.PartialAsync("Layouts/Header")
         @RenderBody()
+        @await Html.PartialAsync("Layouts/Footer")
     </body>
 </html>

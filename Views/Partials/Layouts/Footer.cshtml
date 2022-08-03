@@ -1,0 +1,83 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+    var headerLogo = Model.Value<IPublishedContent>("headerLogo");
+}
+<footer class="text-white body-font bg-neutral-800"">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a class="flex title-font font-medium items-center md:justify-start justify-center text-white" href="/" rel="noopener noreferrer">
+        @{
+            if (headerLogo != null)
+            {
+                <img src="@headerLogo.Url()" alt="@headerLogo.Name" class="h-10 w-10 inline-block" />
+            }
+        }
+        <span class="ml-3 text-xl">NearBeach</span>
+      </a>
+      <p class="mt-2 text-sm text-gray-200">An Open Source Project Management</p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Marketing Site</h2>
+        <nav class="list-none mb-10">
+          <ul>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="/">Landing Page</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="/sign_up">Sign Up</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="/pricing">Pricing</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://demo.nearbeach.org" target="_blank" rel="noopener noreferrer">Demo</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3" href="https://help.nearbeach.org" target="_blank" rel="noopener noreferrer">Help</h2>
+        <nav class="list-none mb-10">
+          <ul>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://nearbeach.readthedocs.io" target="_blank" rel="noopener noreferrer">Documentation</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://discord.gg/64uhRztS6n" target="_blank" rel="noopener noreferrer">Discord</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://osticket.nearbeach.org" target="_blank" rel="noopener noreferrer">OsTicket</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Misc</h2>
+        <nav class="list-none mb-10">
+          <ul>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://bugzilla.nearbeach.org" target="_blank" rel="noopener noreferrer">Bugzilla</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://www.patreon.com/NearBeach" target="_blank" rel="noopener noreferrer">Patreon</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://github.com/sponsors/robotichead" target="_blank" rel="noopener noreferrer">GitHub Sponsors</a>
+            </li>
+            <li>
+              <a class="text-gray-200 hover:text-gray-100" href="https://github.com/robotichead/NearBeach" target="_blank" rel="noopener noreferrer">Source Code</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="text-white">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-white text-sm text-center sm:text-left">© 2021 NearBeach —
+        <a href="https://twitter.com/robotichead" rel="noopener noreferrer" class="text-gray-200 ml-1" target="_blank">robotichead</a>
+      </p>
+    </div>
+  </div>
+</footer>

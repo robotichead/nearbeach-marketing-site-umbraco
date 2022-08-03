@@ -3,15 +3,13 @@
     var fullScreenTextMessage = Model.Value("fullScreenTextMessage");
 }
 
-<section class="full-screen-message" 
-         style="background-color: #f5f8fa;"
->
+<section class="full-screen-message bg-neutral-100">
     <!--SPACER-->
     <div class="spacer h-48"></div>
     
     <!--CONTENT-->
     <div class="message text-3xl md:text-7xl px-4 md:px-14 font-lexend-deca">
-        @fullScreenTextMessage
+        @Html.Raw(fullScreenTextMessage)
     </div>  
     
     <!--SPACER-->

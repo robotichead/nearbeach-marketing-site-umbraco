@@ -7,6 +7,7 @@
     var desktopImage = Model.Value<IPublishedContent>("desktopImage");
     var tabletImage = Model.Value<IPublishedContent>("tabletImage");
     var mobileImage = Model.Value<IPublishedContent>("mobileImage");
+    var headerLogo = Model.Value<IPublishedContent>("headerLogo");
 }
 
 <section class="hero">
@@ -17,6 +18,12 @@
         <!--CONTENT-->
         <div class="mx-auto mt-20 text-center text-slate-50">
             <!--COPY-->
+            @{
+                if (headerLogo != null)
+                {
+                    <img src="@headerLogo.Url()" alt="@headerLogo.Name" class="w-40 h-40 mx-auto mb-5" />
+                }
+            }
             <h1 class="header-text text-5xl sm:text-8xl font-normal font-pacifico tracking-widest">@Model.Value("headerText")</h1>
             <p class="header-copy mx-auto text-1xl sm:text-3xl font-thin font-lexend-deca max-w-xs sm:max-w-2xl">@Model.Value("headerCopy")</p>
             
@@ -38,7 +45,7 @@
                 >
                 <img src="@mobileImage.Url()"
                      class="block md:hidden"
-                <!-->-->
+                />
             </div>
         </div>
     </div>
