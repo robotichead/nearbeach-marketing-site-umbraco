@@ -14,6 +14,7 @@
         var content = singleList.Content;
         var link = content.Value("MiscLink");
         var image = content.Value<MediaWithCrops>("MiscImage");
+        var miscLinkDescription = content.Value<string>("MiscLinkDescription");
         
         var cssString = "sm:flex-row";
         if (index % 2 == 1)
@@ -24,6 +25,7 @@
         <div class="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 flex-col @cssString">
           <div class="h-20 w-60 mr-4 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 flex-shrink-0">
             <a href="@link" target="_blank" rel="noopener noreferrer">
+              <span class="sr-only">@miscLinkDescription</span>
               <img alt="" class="p-4" src="@image.LocalCrops.Src">
             </a>
           </div>
@@ -31,7 +33,7 @@
             <h2 class="text-gray-900 text-lg title-font font-medium mb-2">@content.Value("MiscHeader")</h2>
             <p class="leading-relaxed text-base">@content.Value("MiscText")</p>
             <a class="mt-3 text-indigo-700 inline-flex items-center" href="@link" target="_blank" rel="noopener noreferrer">
-              Learn More ->
+              Learn More
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                 <path d="M5 12h14M12 5l7 7-7 7"></path>
               </svg>
