@@ -2,5 +2,15 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.SelfHosting>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+	Layout = "Master.cshtml";
 }
+
+<!--HERO PARTIAL VIEW-->
+@await Html.PartialAsync("Compositions/Hero")
+
+<!-- SPLIT -->
+<div class="split bg-neutral-100"></div>
+
+<!--Instruction Set-->
+@await Html.PartialAsync("Compositions/Instruction List")
+
