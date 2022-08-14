@@ -43,10 +43,9 @@ services:
         ports:
         - 3306:3306
         environment:
-        - MYSQL_ROOT_PASSWORD=4eFkLcSPcd4ygdbg
-        - MYSQL_DATABASE=nearbeach_8Y0Wi
-        - MYSQL_USER=nearbeach_IjdK9
-        - MYSQL_PASSWORD=p3WF3LUM9WBTibww
+        - MYSQL_DATABASE=<<Please fill>>
+        - MYSQL_USER=<<Please fill>>
+        - MYSQL_PASSWORD=<<Please fill>>
         volumes:
         - ./init:/docker-entrypoint-initdb.d
     nearbeach:
@@ -58,10 +57,9 @@ services:
         - SMTP_EMAIL_PORT=<<Please fill>>
         - SMTP_EMAIL_HOST_USER=<<Please fill>>
         - SMTP_EMAIL_HOST_PASSWORD=<<Please fill>>
-        - MYSQL_DATABASE=nearbeach_8Y0Wi
-        - MYSQL_USER=nearbeach_IjdK9
-        - MYSQL_PASSWORD=p3WF3LUM9WBTibww
-        - MYSQL_ROOT_PASSWORD=4eFkLcSPcd4ygdbg
+        - MYSQL_DATABASE=<<Please fill>>
+        - MYSQL_USER=<<Please fill>>
+        - MYSQL_PASSWORD=<<Please fill>>
         - MYSQL_HOST=nearbeach-db
         - ADMIN_USERNAME=<<Please fill>>
         - ADMIN_EMAIL=<<Please fill>>
