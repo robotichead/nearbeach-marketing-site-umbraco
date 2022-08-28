@@ -1,0 +1,17 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+@{
+	Layout = "Master.cshtml";
+}
+
+<!--HERO PARTIAL VIEW-->
+@await Html.PartialAsync("Compositions/Hero")
+
+<!--SPLIT-->
+<div class="split bg-gradient-to-r from-pink-100 to-yellow-100"></div>
+
+<!--PRICE-->
+@await Html.PartialAsync("Compositions/Pricing Widgets")
+
+<!--SPLIT-->
+<div class="split bg-neutral-800"></div>
